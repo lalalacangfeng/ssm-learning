@@ -1,4 +1,4 @@
-package test;
+package com.ssm.mybatis.test;
 
 import java.io.InputStream;
 
