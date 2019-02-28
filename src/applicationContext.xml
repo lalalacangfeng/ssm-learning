@@ -78,4 +78,25 @@
 <import resource="" />
 -->
 
+<!-- 方法执行前增强 -->
+<bean id="helloImpl_ref" class="com.ssm.spring.ioc.HelloImpl"></bean>
+<bean id="my_beforemethod_advice" class="com.ssm.spring.ioc.My_MethodBeforeAavice"></bean>
+<bean id="my_proxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+	<!-- proxyInterfaces指定了代理接口的名称 -->
+	<property name="proxyInterfaces">
+		<value>com.ssm.spring.ioc.Hello</value>
+	</property>
+	
+	<!-- target指定了接口实现类的对象 -->
+	<property name="target" ref="helloImpl_ref"></property>
+
+	<!-- Interceprot表示拦截者 -->
+	<property name="interceptorNames">
+		<list>
+			<value>my_beforemethod_advice</value>
+		</list>
+	</property>
+</bean>
+
+
 </beans>
