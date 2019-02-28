@@ -17,7 +17,7 @@ public class TestVar {
 		this.varData = varData;
 	}	
 	
-	@Test
+//	@Test
 	public void test(){
 		System.out.println("关于test的测试");
 		ApplicationContext applicationContext = new 

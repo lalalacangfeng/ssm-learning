@@ -17,7 +17,7 @@ public class TestPro {
 		this.proper=proper;
 	}
 	
-	@Test
+//	@Test
 	public void protest(){
 		System.out.println("protest测试");
 		ApplicationContext applicationContext = new 
