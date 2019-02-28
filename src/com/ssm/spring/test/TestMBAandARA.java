@@ -6,12 +6,14 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.ssm.spring.ioc.Hello;
 
-public class TestMBA {
+public class TestMBAandARA {
 
 	@Test
-	public void run(){
+	public void runMBAandARA(){
 		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		Hello hello_ref = (Hello)context.getBean("my_proxy");
 		hello_ref.say_hello();
 	}
+	
+	
 }
