@@ -8,11 +8,22 @@ import org.junit.Test;
 import com.orm.Users;
 import com.orm.UsersExample;
 import com.orm.UsersExample.Criteria;
+import com.orm.UsersMapper;
 import com.ssm.mybatis.GetSqlSession;
 
 public class TestUser {
 
 	//在iBator逆向工程生成的文件XxxExample.java中包含一个static的内部类Criteria，Criteria中的方法是定义SQL 语句where后的查询条件。
+	
+	@Test
+	public void TestMapper(){
+		SqlSession sqlSession = GetSqlSession.getSqlSession();
+		UsersMapper mapper = sqlSession.getMapper(UsersMapper.class);
+		Users user = mapper.selectByPrimaryKey(1);
+		System.out.println("id:"+user.getUid());
+		System.out.println("name:"+user.getUsername());
+		System.out.println("email:"+user.getEmail());
+	}
 	
 	@Test
 	public void TestSelectById(){
