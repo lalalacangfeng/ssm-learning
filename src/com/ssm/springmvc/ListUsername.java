@@ -19,12 +19,14 @@ public class ListUsername {
 			listUsername.add("username"+(i+1));
 		}
 		model.addAttribute("listUsername", listUsername);
-		return "listUsername.jsp";
+		return "listUsername";
 	}
 	
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login(@RequestParam("username") String username){
 		System.out.println("username:"+username);
-		return "test.jsp";
+		//重定向：在返回字符串中加入"redirect:/"前缀代表重定向——无参数传递
+		//重定向：在返回字符串中加入"redirect:/***.spring?参数="+参数   前缀代表重定向——有参数传递
+		return "redirect:/test.jsp";
 	}
 }
