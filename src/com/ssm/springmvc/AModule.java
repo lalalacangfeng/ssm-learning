@@ -10,6 +10,7 @@ public class AModule {
 	@RequestMapping("/login")
 	public String login(){
 		System.out.println("aModule模块登录");
-		return "../index.jsp";
+		//在springmvcservlet.xml配置中对路径进行了限定，因此不用加前缀/与后缀.jsp
+		return "index";
 	}
 }
