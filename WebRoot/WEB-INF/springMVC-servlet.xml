@@ -13,6 +13,7 @@
 	">
 	<context:component-scan base-package="com.ssm.springmvc"></context:component-scan>
 	
+	<!-- 在控制层传回JSON字符串配置 -->
 	<bean
 		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
 		<property name="messageConverters">
@@ -28,6 +29,11 @@
 				<value>text/plain;charset=utf-8</value>
 			</list>
 		</property>
+	</bean>
+	
+	<!-- 文件上传请求 -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="204800000" />
 	</bean>
 	
 	<!-- 使JSON字符串自动转成实体类 -->
