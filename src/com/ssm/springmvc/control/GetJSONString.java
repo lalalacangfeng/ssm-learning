@@ -20,7 +20,7 @@ public class GetJSONString {
 		return "test";
 	}
 	
-	@RequestMapping(value="createJSON",method=RequestMethod.POST)
+	@RequestMapping(value="getJSON",method=RequestMethod.POST)
 	public String createJSON(@RequestBody Userinfo userinfo){
 		System.out.println("username value="+userinfo.getUsername());
 		System.out.println("password value="+userinfo.getPassword());

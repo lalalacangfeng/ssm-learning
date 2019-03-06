@@ -23,7 +23,7 @@
   			$.ajax({
   				type:"POST",
   				data:jsonStringRef,
-  				url:"createJSON.spring?t=" +new Date().getTime(),
+  				url:"getJSON.spring?t=" +new Date().getTime(),
   				contentType:"application/json"
   			});
   		}
