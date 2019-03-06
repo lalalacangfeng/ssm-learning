@@ -76,3 +76,7 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
 <!-- 使JSON字符串自动转成实体类 -->
 <mvc:annotation-driven />
 5.添加jacksonJSON.jar包
+
+C:解析不同格式的JSON字符串示例
+1.新建控制层TestJson.java来测试实体类、列表和map
+2.新建视图testJSON.jsp

@@ -1,4 +1,4 @@
-package com.ssm.springmvc;
+package com.ssm.springmvc.control;
 
 import java.util.ArrayList;
 import java.util.List;

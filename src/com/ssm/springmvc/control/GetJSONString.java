@@ -1,4 +1,4 @@
-package com.ssm.springmvc;
+package com.ssm.springmvc.control;
 
 import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
